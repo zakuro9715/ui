@@ -1,4 +1,4 @@
-# vue-zui
+# vue-zui - z@kuro's extended Vue UI Framework
 
 ## Project setup
 ```
