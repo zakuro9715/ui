@@ -1,5 +1,5 @@
 /*!
- * ui v0.1.3 
+ * ui v0.1.4 
  * (c) 2019 z@kuro
  * Released under the MIT License.
  */
@@ -218,12 +218,8 @@
       lineClass: function lineClass() {
         return {
           'vue-ui-buttons-line-row': this.flexDir === 'row',
-          'vue-ui-buttons-line-column': this.flexDir === 'column'
-        };
-      },
-      lineStyles: function lineStyles() {
-        return {
-          'align-items': isEnabled(this.stretch) ? 'stretch' : 'center'
+          'vue-ui-buttons-line-column': this.flexDir === 'column',
+          'vue-ui-buttons-line-stretch': isEnabled(this.stretch)
         };
       }
     }
@@ -233,13 +229,13 @@
   const __vue_script__ = script;
 
   /* template */
-  var __vue_render__ = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"vue-ui-buttons-line",class:_vm.lineClass,style:(_vm.lineStyles)},[_vm._t("default")],2)};
+  var __vue_render__ = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"vue-ui-buttons-line",class:_vm.lineClass},[_vm._t("default")],2)};
   var __vue_staticRenderFns__ = [];
 
     /* style */
     const __vue_inject_styles__$1 = function (inject) {
       if (!inject) return
-      inject("data-v-68a9c44c_0", { source: ".vue-ui-buttons-line{display:flex}.vue-ui-buttons-line-row{flex-direction:row;justify-content:center;align-items:center;align-content:center}.vue-ui-buttons-line-column{flex-direction:column;justify-content:center;align-items:center;align-content:center}.vue-ui-buttons-line .vue-ui-button:not(:first-child):not(last-child){border-radius:0}.vue-ui-buttons-line-row .vue-ui-button:first-child{border-top-right-radius:0;border-bottom-right-radius:0}.vue-ui-buttons-line-row .vue-ui-button:last-child{border-top-left-radius:0;border-bottom-left-radius:0}.vue-ui-buttons-line-column .vue-ui-button:first-child{border-bottom-left-radius:0;border-bottom-right-radius:0}.vue-ui-buttons-line-column .vue-ui-button:last-child{border-top-left-radius:0;border-top-right-radius:0}", map: undefined, media: undefined });
+      inject("data-v-30b4717e_0", { source: ".vue-ui-buttons-line{display:flex}.vue-ui-buttons-line.vue-ui-buttons-line-stretch{align-items:stretch}.vue-ui-buttons-line.vue-ui-buttons-line-stretch .vue-ui-button{flex-grow:1}.vue-ui-buttons-line-row{flex-direction:row;justify-content:center;align-items:center;align-content:center}.vue-ui-buttons-line-column{flex-direction:column;justify-content:center;align-items:center;align-content:center}.vue-ui-buttons-line .vue-ui-button:not(:first-child):not(last-child){border-radius:0}.vue-ui-buttons-line-row .vue-ui-button:first-child{border-top-right-radius:0;border-bottom-right-radius:0}.vue-ui-buttons-line-row .vue-ui-button:last-child{border-top-left-radius:0;border-bottom-left-radius:0}.vue-ui-buttons-line-column .vue-ui-button:first-child{border-bottom-left-radius:0;border-bottom-right-radius:0}.vue-ui-buttons-line-column .vue-ui-button:last-child{border-top-left-radius:0;border-top-right-radius:0}", map: undefined, media: undefined });
 
     };
     /* scoped */
@@ -263,7 +259,7 @@
       undefined
     );
 
-  var version = '0.1.3';
+  var version = '0.1.4';
 
   var install = function install(Vue) {
     Vue.use(VueUi);

@@ -33,7 +33,7 @@ export default {
       return {
         'vue-ui-buttons-line-row': this.flexDir === 'row',
         'vue-ui-buttons-line-column': this.flexDir === 'column',
-        'vue-ui-buttons-line-stretch': isEnabled(this.stretch)
+        'vue-ui-buttons-line-stretch': isEnabled(this.stretch),
       }
     },
   },
