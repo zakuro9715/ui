@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <VueButtonsLine horizontal stretch>
+    <VueButtonsLine horizontal>
       <VueButton class="primary" label="button" />
       <VueButton class="info" label="button" />
       <VueButton class="danger" label="button" />
@@ -9,6 +9,11 @@
       <VueButton class="round" label="button" />
       <VueButton label="button" />
       <VueButton class="round" label="button" />
+    </VueButtonsLine>
+    <VueButtonsLine horizontal stretch>
+      <VueButton class="primary" label="button" />
+      <VueButton class="info" label="button" />
+      <VueButton class="danger" label="button" />
     </VueButtonsLine>
     <VueGroup v-model="choice">
       <VueGroupButton class="round" value="A" label="A" />

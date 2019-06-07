@@ -1,2 +1,1 @@
-<style src="@vue/ui/dist/vue-ui.css">
-</style>
+<style src="@vue/ui/dist/vue-ui.css"></style>
