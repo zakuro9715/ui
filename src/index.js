@@ -1,3 +1,5 @@
+require('@vue/ui/dist/vue-ui.css')
+const VueUi = require('@vue/ui')
 const version = '__VERSION__'
 
 const install = Vue => {
@@ -9,6 +11,8 @@ const install = Vue => {
   Vue.prototype.$add = (a, b) => {
     return a + b
   }
+
+  Vue.use(VueUi)
 
   /*
    * NOTE:
