@@ -1,10 +1,16 @@
 <template>
-  <div class="vue-ui-buttons-line" :class="lineClass">
+  <div class="vue-ui-buttons-line" :class="lineClass" :style="lineStyles">
     <slot />
   </div>
 </template>
 
 <script>
+function isEnabled(v) {
+  return !(
+    v === undefined ||
+    v === null ||
+    v === false)
+}
 export default {
   name: 'VueButtonsLine',
   props: {
@@ -16,21 +22,24 @@ export default {
       type: Boolean,
       default: () => false,
     },
+    stretch: {
+      type: Boolean,
+      default: () => false,
+    }
   },
   computed: {
     flexDir() {
-      return !(
-        this.vertical === undefined ||
-        this.vertical === null ||
-        this.vertical === false
-      )
-        ? 'column'
-        : 'row'
+      return isEnabled(this.vertical) ? 'column' : 'row'
     },
     lineClass() {
       return {
         'vue-ui-buttons-line-row': this.flexDir === 'row',
         'vue-ui-buttons-line-column': this.flexDir === 'column',
+      }
+    },
+    lineStyles() {
+      return {
+        'align-items': isEnabled(this.stretch) ? 'stretch' : 'center'
       }
     },
   },
