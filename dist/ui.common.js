@@ -1,11 +1,11 @@
 /*!
- * vue-zui v0.1.0 
+ * ui v0.1.0 
  * (c) 2019 z@kuro
  * Released under the MIT License.
  */
-require('@vue/ui/dist/vue-ui.css');
+'use strict';
 
-var path = require('path');
+require('@vue/ui/dist/vue-ui.css');
 
 var VueUi = require('@vue/ui');
 
@@ -33,4 +33,4 @@ if (typeof window !== 'undefined' && window.Vue) {
   window.Vue.use(plugin);
 }
 
-export default plugin;
+module.exports = plugin;

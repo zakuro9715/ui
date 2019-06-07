@@ -1,17 +1,15 @@
 /*!
- * vue-zui v0.1.0 
+ * ui v0.1.0 
  * (c) 2019 z@kuro
  * Released under the MIT License.
  */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
   typeof define === 'function' && define.amd ? define(factory) :
-  (global = global || self, global.VueZui = factory());
+  (global = global || self, global.Ui = factory());
 }(this, function () { 'use strict';
 
   require('@vue/ui/dist/vue-ui.css');
-
-  var path = require('path');
 
   var VueUi = require('@vue/ui');
 
