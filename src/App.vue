@@ -1,9 +1,29 @@
 <template>
   <div id="app">
-    <VueButton label="button" />
+    <VueButtonsLine horizontal>
+      <VueButton class="primary" label="button" />
+      <VueButton class="info" label="button" />
+      <VueButton class="danger" label="button" />
+    </VueButtonsLine>
+    <VueButtonsLine vertical>
+      <VueButton class="round" label="button" />
+      <VueButton label="button" />
+      <VueButton class="round"label="button" />
+    </VueButtonsLine>
+    <VueGroup v-model="choice">
+      <VueGroupButton class="round" value="A" label="A" />
+      <VueGroupButton value="B" label="B" />
+    </VueGroup>
   </div>
 </template>
 
+<script>
+export default {
+  data: () => ({
+    choice: null,
+  }),
+}
+</script>
 
 <style>
 #app {
@@ -15,3 +35,4 @@
   margin-top: 60px;
 }
 </style>
+
