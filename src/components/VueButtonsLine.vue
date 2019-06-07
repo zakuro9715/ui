@@ -22,8 +22,10 @@ export default {
       return !(
         this.vertical === undefined ||
         this.vertical === null ||
-        this.vertical === false) ?
-        'column': 'row'
+        this.vertical === false
+      )
+        ? 'column'
+        : 'row'
     },
     lineClass() {
       return {
@@ -31,12 +33,11 @@ export default {
         'vue-ui-buttons-line-column': this.flexDir === 'column',
       }
     },
-  }
+  },
 }
 </script>
 
 <style>
-
 .vue-ui-buttons-line {
   display: flex;
 }

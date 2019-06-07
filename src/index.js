@@ -1,9 +1,9 @@
 require('@vue/ui/dist/vue-ui.css')
-const path = require('path')
 const VueUi = require('@vue/ui')
+
 const version = '__VERSION__'
 
-const install = Vue => {
+const install = (Vue) => {
   Vue.use(VueUi)
 
   const modules = require.context('./components', true, /^.*\.vue$/)
@@ -17,7 +17,7 @@ const install = Vue => {
 
 const plugin = {
   install,
-  version
+  version,
 }
 
 export default plugin

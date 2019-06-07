@@ -8,7 +8,7 @@
     <VueButtonsLine vertical>
       <VueButton class="round" label="button" />
       <VueButton label="button" />
-      <VueButton class="round"label="button" />
+      <VueButton class="round" label="button" />
     </VueButtonsLine>
     <VueGroup v-model="choice">
       <VueGroupButton class="round" value="A" label="A" />
@@ -27,7 +27,7 @@ export default {
 
 <style>
 #app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -35,4 +35,3 @@ export default {
   margin-top: 60px;
 }
 </style>
-

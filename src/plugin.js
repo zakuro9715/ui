@@ -3,6 +3,8 @@
  *   This file is plugin stub for main.js
  */
 
+/* eslint-disable */
+
 import Vue from 'vue'
 import plugin from './index'
 

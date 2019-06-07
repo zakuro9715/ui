@@ -1,5 +1,5 @@
 {
-  "name": "vue-zui",
+  "name": "@zakuro9715/ui",
   "version": "0.1.0",
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -12,18 +12,19 @@
     "prepublish": "vue-cli-service lint && vue-cli-service docs --mode build && vue-cli-service build",
     "start": "vue-cli-service serve"
   },
-  "main": "dist/vue-zui.common.js",
-  "module": "dist/vue-zui.esm.js",
-  "unpkg": "dist/vue-zui.umd.min.js",
+  "main": "dist/ui.common.js",
+  "module": "dist/ui.esm.js",
+  "unpkg": "dist/ui.umd.min.js",
   "files": [
-    "dist/vue-zui.common.js",
-    "dist/vue-zui.umd.min.js",
-    "dist/vue-zui.umd.js",
-    "dist/vue-zui.esm.js",
+    "dist/ui.common.js",
+    "dist/ui.umd.min.js",
+    "dist/ui.umd.js",
+    "dist/ui.esm.js",
     "src"
   ],
   "dependencies": {
     "@vue/ui": "^0.9.2",
+    "@zakuro9715/eslint-config-zakuro": "^4.0.0",
     "core-js": "^2.6.5"
   },
   "author": {
@@ -43,6 +44,6 @@
     "vue-template-compiler": "^2.6.10",
     "vue": "^2.6.10"
   },
-  "jsdelivr": "dist/vue-zui.umd.min.js",
+  "jsdelivr": "dist/ui.umd.min.js",
   "sideeffects": false
 }
