@@ -1,23 +1,18 @@
 require('@vue/ui/dist/vue-ui.css')
+const path = require('path')
 const VueUi = require('@vue/ui')
 const version = '__VERSION__'
 
 const install = Vue => {
-  /*
-   * NOTE:
-   *   if you need to extend Vue contstructor, you can extend it in here.
-   */
-
-  Vue.prototype.$add = (a, b) => {
-    return a + b
-  }
-
   Vue.use(VueUi)
 
-  /*
-   * NOTE:
-   *  somthing implementation here ...
-   */
+  const modules = require.context('./components', true, /^.*\.vue$/)
+  const nameReg = /(\w+)\.vue/
+  modules.keys().forEach((key) => {
+    const name = key.match(nameReg)[1]
+    const module = modules(key)
+    Vue.component(name, module.default)
+  })
 }
 
 const plugin = {
