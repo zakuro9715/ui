@@ -1,5 +1,5 @@
 /*!
- * ui v0.1.0 
+ * ui v0.1.1 
  * (c) 2019 z@kuro
  * Released under the MIT License.
  */
@@ -13,7 +13,7 @@
 
   var VueUi = require('@vue/ui');
 
-  var version = '0.1.0';
+  var version = '0.1.1';
 
   var install = function install(Vue) {
     Vue.use(VueUi);
