@@ -20,9 +20,11 @@
       <VueGroupButton value="B" label="B" />
     </VueGroup>
     <VueButtonsLine vertical stretch style="width: 400px; margin: auto;">
-      <VueButton class="round" label="button" />
-      <VueButton label="button" />
-      <VueButton class="round" label="button" />
+      <VueButton class="round primary" label="button" />
+      <VueButtonsLine horizontal stretch>
+        <VueButton class="round" label="button" />
+        <VueButton class="round danger" label="button" />
+      </VueButtonsLine>
     </VueButtonsLine>
   </div>
 </template>
