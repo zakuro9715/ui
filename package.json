@@ -1,15 +1,29 @@
 {
   "name": "vue-zui",
   "version": "0.1.0",
-  "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "demo": "vue-cli-service demo",
+    "docs": "npm run docs:serve",
+    "docs:build": "vue-cli-service docs --mode build",
+    "docs:serve": "vue-cli-service docs --mode serve",
+    "prepublish": "vue-cli-service lint && vue-cli-service docs --mode build && vue-cli-service build",
+    "start": "vue-cli-service serve"
   },
+  "main": "dist/vue-zui.common.js",
+  "module": "dist/vue-zui.esm.js",
+  "unpkg": "dist/vue-zui.umd.min.js",
+  "files": [
+    "dist/vue-zui.common.js",
+    "dist/vue-zui.umd.min.js",
+    "dist/vue-zui.umd.js",
+    "dist/vue-zui.esm.js",
+    "src"
+  ],
   "dependencies": {
-    "core-js": "^2.6.5",
-    "vue": "^2.6.10"
+    "core-js": "^2.6.5"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.8.0",
@@ -19,6 +33,10 @@
     "babel-eslint": "^10.0.1",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
-    "vue-template-compiler": "^2.6.10"
-  }
+    "vue-cli-plugin-p11n": "^0.3.0",
+    "vue-template-compiler": "^2.6.10",
+    "vue": "^2.6.10"
+  },
+  "jsdelivr": "dist/vue-zui.umd.min.js",
+  "sideeffects": false
 }
