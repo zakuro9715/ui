@@ -30,6 +30,15 @@
           </VueButtonsLine>
         </VueButtonsLine>
       </VueCard>
+
+      <VueCard title="Drag and Drop">
+        <VueDroppableZone @drop="dropped = $event" v-slot="{ over }">
+          <div v-if="over">Drop here!</div>
+          <div v-else-if="dropped">{{ dropped }}</div>
+          <div v-else>drop zone</div>
+        </VueDroppableZone>
+        {{ dropped }}
+      </VueCard>
     </div>
   </div>
 </template>
@@ -38,6 +47,7 @@
 export default {
   data: () => ({
     choice: null,
+    dropped: null,
   }),
 }
 </script>
