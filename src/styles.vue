@@ -17,5 +17,9 @@
   --vue-ui-color-warning        : #ea6e00;
   --vue-ui-color-info           : #03c2e6;
   --vue-ui-color-success        : #42b983;
+
+  --vue-ui-border-radius: 3px;
+  --vue-ui-card-padding: 16px;
+  --vue-ui-card-margin: 16px;
 }
 </style>

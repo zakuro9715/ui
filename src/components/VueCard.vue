@@ -38,7 +38,8 @@ export default {
 
 .vue-ui-card {
   box-sizing: border-box;
-  padding: 16px;
+  padding: var(--vue-ui-card-padding);
+  border-radius: var(--vue-ui-border-radius);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
