@@ -20,7 +20,10 @@ export default {
 </script>
 
 <style scoped>
-.vue-ui-title {}
+.vue-ui-dark-mode .vue-ui-card {
+  background-color: var(--vue-ui-color-dark-neutral);
+}
+
 .vue-ui-card {
   box-sizing: border-box;
   padding: 16px;

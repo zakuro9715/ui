@@ -1,7 +1,11 @@
 <template>
-  <div id="app">
+  <div id="app" :class="{'vue-ui-dark-mode': darkMode }">
+
     <div class="container">
       <h1>z@kuro UI Framework</h1>
+      <VueCard>
+      <VueSwitch v-model="darkMode">DrakMode</VueSwitch>
+      </VueCard>
       <VueCard title="Buttons">
         <VueButtonsLine horizontal>
           <VueButton class="primary" label="button" />
@@ -48,7 +52,11 @@ export default {
   data: () => ({
     choice: null,
     dropped: null,
+    darkMode: localStorage.getItem('darkMode')
   }),
+  watch: {
+    darkMode (v) { localStorage.setItem('darkMode', v ? v : '') },
+  },
 }
 </script>
 
