@@ -5,6 +5,8 @@
 </template>
 
 <script>
+import ToggleMixin from '../mixins/ToggleMixin'
+
 export default {
   name: 'VueInverse',
   props: {
@@ -13,24 +15,14 @@ export default {
       default: true,
     },
   },
+  mixins: [ToggleMixin],
   computed: {
     hostClass() {
       return {
-        'vue-ui-inverse': this.resolved,
-        'vue-ui-noinverse': !this.resolved,
+        'vue-ui-inverse': this.toggleOn,
+        'vue-ui-noinverse': this.toggleOff,
       }
     },
-    resolved() {
-      return this.value ^ this.currentInverse
-    },
-  },
-  provide() {
-    return {
-      currentInverse: this.resolved,
-    }
-  },
-  inject: {
-    currentInverse: { default: false },
   },
 }
 </script>
