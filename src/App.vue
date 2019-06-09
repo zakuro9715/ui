@@ -6,21 +6,44 @@
         <VueSwitch v-model="darkMode">DrakMode</VueSwitch>
       </VueCard>
       <VueCard title="Buttons">
-        <VueButtonsLine horizontal>
-          <VueButton class="primary" label="button" />
-          <VueButton class="info" label="button" />
-          <VueButton class="danger" label="button" />
-        </VueButtonsLine>
-        <VueButtonsLine vertical>
-          <VueButton class="round" label="button" />
-          <VueButton label="button" />
-          <VueButton class="round" label="button" />
-        </VueButtonsLine>
-        <VueCard inverse>
+        <VueCard>
           <VueButtonsLine horizontal stretch>
-            <VueButton class="primary" label="button" />
-            <VueButton class="info" label="button" />
-            <VueButton class="danger" label="button" />
+            <VueButton label="default" />
+            <VueButton class="primary" label="primary" />
+            <VueButton class="accent" label="accent" />
+            <VueButton class="danger" label="danger" />
+            <VueButton class="warning" label="warning" />
+            <VueButton class="success" label="success" />
+            <VueButton class="info" label="info" />
+          </VueButtonsLine>
+          <VueButtonsLine horizontal stretch>
+            <VueButton class="flat" label="default" />
+            <VueButton class="primary flat" label="primary" />
+            <VueButton class="accent flat" label="accent" />
+            <VueButton class="danger flat" label="danger" />
+            <VueButton class="warning flat" label="warning" />
+            <VueButton class="success flat" label="success" />
+            <VueButton class="info flat" label="info" />
+          </VueButtonsLine>
+        </VueCard>
+        <VueCard class="inverse">
+          <VueButtonsLine horizontal stretch>
+            <VueButton label="default" />
+            <VueButton class="primary" label="primary" />
+            <VueButton class="accent" label="accent" />
+            <VueButton class="danger" label="danger" />
+            <VueButton class="warning" label="warning" />
+            <VueButton class="success" label="success" />
+            <VueButton class="info" label="info" />
+          </VueButtonsLine>
+          <VueButtonsLine horizontal stretch>
+            <VueButton class="flat" label="default" />
+            <VueButton class="primary flat" label="primary" />
+            <VueButton class="accent flat" label="accent" />
+            <VueButton class="danger flat" label="danger" />
+            <VueButton class="warning flat" label="warning" />
+            <VueButton class="success flat" label="success" />
+            <VueButton class="info flat" label="info" />
           </VueButtonsLine>
         </VueCard>
         <VueGroup v-model="choice">

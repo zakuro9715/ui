@@ -1,5 +1,5 @@
 <template>
-  <div class="vue-ui-card" :class="cardClass">
+  <div class="vue-ui-card" ref="card">
     <h2 v-if="title" class="vue-ui-card-title">{{ title }}</h2>
     <div class="vue-ui-card-content">
       <slot />
@@ -15,15 +15,26 @@ export default {
   name: 'VueCard',
   props: {
     title: String,
-    inverse: Boolean,
   },
-  computed: {
-    cardClass() {
-      return {
-        'vue-ui-card-inverse': this.inverse,
+  methods: {
+    modifyChildren() {
+      this.$refs.card.querySelectorAll('.vue-ui-button').forEach((el) => {
+        el.classList.add('vue-ui-card-button')
+        if (this.$refs.card.classList.contains('inverse')) {
+          el.classList.toggle('vue-ui-card-inverse-button')
+        }
       }
-    },
+    )}
   },
+  mounted() {
+    this.modifyChildren()
+  },
+  watch: {
+    inverse(inverse) {
+      this.modifyChildren()
+    }
+  }
+
 }
 </script>
 
@@ -32,7 +43,7 @@ export default {
   background-color: var(--vue-ui-color-dark-neutral);
 }
 
-.vue-ui-dark-mode .vue-ui-card.vue-ui-card-inverse {
+.vue-ui-dark-mode .vue-ui-card.inverse {
   background-color: var(--vue-ui-color-dark);
 }
 
@@ -47,12 +58,21 @@ export default {
   background-color: var(--vue-ui-color-light-neutral);
 }
 
-.vue-ui-card.vue-ui-card-inverse {
+.vue-ui-card.inverse {
   background-color: var(--vue-ui-color-light);
 }
 
 .vue-ui-card-actions {
   display: flex;
   flex-direction: column;
+}
+</style>
+<style>
+
+.vue-ui-card-button:not(.vue-ui-card-inverse-button):not(.flat):not(.primary):not(.accent):not(.danger):not(.warning) {
+  background-color: var(--vue-ui-color-light);
+}
+.vue-ui-dark-mode .vue-ui-card-button.vue-ui-card-inverse-button:not(.flat):not(.primary):not(.accent):not(.danger):not(.warning) {
+  background-color: var(--vue-ui-color-dark-neutral);
 }
 </style>
