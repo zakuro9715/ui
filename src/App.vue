@@ -16,11 +16,13 @@
           <VueButton label="button" />
           <VueButton class="round" label="button" />
         </VueButtonsLine>
-        <VueButtonsLine horizontal stretch>
-          <VueButton class="primary" label="button" />
-          <VueButton class="info" label="button" />
-          <VueButton class="danger" label="button" />
-        </VueButtonsLine>
+        <VueCard inverse>
+          <VueButtonsLine horizontal stretch>
+            <VueButton class="primary" label="button" />
+            <VueButton class="info" label="button" />
+            <VueButton class="danger" label="button" />
+          </VueButtonsLine>
+        </VueCard>
         <VueGroup v-model="choice">
           <VueGroupButton class="round" value="A" label="A" />
           <VueGroupButton value="B" label="B" />
