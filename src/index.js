@@ -3,6 +3,7 @@ import VueUi from '@vue/ui'
 import './styles.vue'
 import VueCard from './components/VueCard.vue'
 import VueButtonsLine from './components/VueButtonsLine.vue'
+import VueInverse from './components/VueInverse'
 import VueDroppableZone from './components/VueDroppableZone.vue'
 
 const version = '__VERSION__'
@@ -10,7 +11,7 @@ const version = '__VERSION__'
 const install = (Vue) => {
   Vue.use(VueUi)
 
-  const components = [VueButtonsLine, VueCard, VueDroppableZone]
+  const components = [VueButtonsLine, VueCard, VueInverse, VueDroppableZone]
   components.forEach((v) => {
     Vue.component(v.name, v)
   })

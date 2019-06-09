@@ -26,7 +26,7 @@
             <VueButton class="info flat" label="info" />
           </VueButtonsLine>
         </VueCard>
-        <VueCard class="inverse">
+        <VueCard>
           <VueButtonsLine horizontal stretch>
             <VueButton label="default" />
             <VueButton class="primary" label="primary" />
