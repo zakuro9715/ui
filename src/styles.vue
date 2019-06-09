@@ -1,4 +1,8 @@
 <style src="@vue/ui/dist/vue-ui.css"></style>
+<script>
+/* eslint-disable */
+</script>
+
 <style>
 :root {
   /* https://github.com/vuejs/ui/blob/822e0ba21ef4cc856b981da1a46f25ef002eda97/src/style/colors.styl */

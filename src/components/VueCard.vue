@@ -15,7 +15,7 @@ export default {
   name: 'VueCard',
   props: {
     title: String,
-  }
+  },
 }
 </script>
 
