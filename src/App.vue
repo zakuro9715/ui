@@ -66,8 +66,7 @@ export default {
 <style scoped>
 .container {
   max-width: 640px;
-  padding: 32px;
-  margin: 0 auto;
+  margin: 32px auto;
   text-align: center;
 }
 </style>
