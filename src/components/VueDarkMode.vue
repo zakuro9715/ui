@@ -5,17 +5,10 @@
 </template>
 
 <script>
-import ToggleMixin from '../mixins/ToggleMixin'
-
+import VueInverseMixin from '../mixins/VueInverseMixin'
 export default {
   name: 'VueDarkMode',
-  props: {
-    value: {
-      type: [Boolean, String],
-      default: true,
-    },
-  },
-  mixins: [ToggleMixin],
+  mixins: [VueInverseMixin],
   computed: {
     hostClass() {
       return {

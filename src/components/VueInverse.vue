@@ -5,25 +5,10 @@
 </template>
 
 <script>
-import ToggleMixin from '../mixins/ToggleMixin'
-
+import VueInverseMixin from '../mixins/VueInverseMixin'
 export default {
   name: 'VueInverse',
-  props: {
-    value: {
-      type: Boolean,
-      default: true,
-    },
-  },
-  mixins: [ToggleMixin],
-  computed: {
-    hostClass() {
-      return {
-        'vue-ui-inverse': this.toggleOn,
-        'vue-ui-noinverse': this.toggleOff,
-      }
-    },
-  },
+  mixins: [VueInverseMixin],
 }
 </script>
 

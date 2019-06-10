@@ -1,6 +1,6 @@
 <template>
   <VueDarkMode :value="darkMode">
-    <VueInverse :value="inverse">
+    <VueInverse :inverse="inverse">
       <slot />
     </VueInverse>
   </VueDarkMode>
