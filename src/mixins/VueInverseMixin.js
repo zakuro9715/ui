@@ -6,9 +6,11 @@ export default (key) => ({
     },
   },
   data() {
-    const data = this.$_VueInverseMixin && this.$_VueInverseMixin.data || {}
+    const data = (this.$_VueInverseMixin && this.$_VueInverseMixin.data) || {}
     return {
-      inverseData: Object.assign({}, data, { [key]: !!data[key] ^ !!this[key] })
+      inverseData: Object.assign({}, data, {
+        [key]: !!data[key] ^ !!this[key],
+      }),
     }
   },
   provide() {
@@ -32,7 +34,7 @@ export default (key) => ({
         [`vue-ui-${key}`]: this.inverseData[key],
         [`vue-ui-no-${key}`]: !this.inverseData[key],
       }
-   },
+    },
   },
   watch: {
     [key]: function(newValue, oldValue) {

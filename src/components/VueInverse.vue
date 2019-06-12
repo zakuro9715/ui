@@ -18,9 +18,11 @@ export default {
     },
   },
   data() {
-    const data = this.$_VueInverseMixin && this.$_VueInverseMixin.data || {}
+    const data = (this.$_VueInverseMixin && this.$_VueInverseMixin.data) || {}
     return {
-      inverseData: Object.assign({}, data, { [this.kind]: !!data[this.kind] ^ !!this.value })
+      inverseData: Object.assign({}, data, {
+        [this.kind]: !!data[this.kind] ^ !!this.value,
+      }),
     }
   },
   provide() {
@@ -44,7 +46,7 @@ export default {
         [`vue-ui-${this.kind}`]: this.inverseData[this.kind],
         [`vue-ui-no-${this.kind}`]: !this.inverseData[this.kind],
       }
-   },
+    },
   },
   watch: {
     value: function(newValue, oldValue) {

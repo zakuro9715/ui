@@ -1,10 +1,12 @@
 <template>
   <VueDroppableZone @drop="drop" class="vue-ui-file-area">
-    <template #overlay>
-      drop file
-    </template>
-
-    <input type="file" ref="input" :accept="accept" @change="inputChange" class="input-tag" />
+    <input
+      type="file"
+      ref="input"
+      :accept="accept"
+      @change="inputChange"
+      class="input-tag"
+    />
     <VueButton @click="openDialog">open file</VueButton>
   </VueDroppableZone>
 </template>
@@ -57,7 +59,7 @@ export default {
     drop(e) {
       const files = e.dataTransfer.files || []
       this.changeFiles(files)
-    }
+    },
   },
 }
 </script>

@@ -1,15 +1,13 @@
 <template>
-  <div class="vue-ui-drop-zone"
-      :class="{ 'vue-ui-drop-zone-base-overed': over }"
-        @dragenter.prevent="dragenter"
-        @dragover.prevent
-        @dragleave="dragleave"
-        @drop.prevent="drop"
-      >
-      <slot :over="over">
-          Drop Here
-      </slot>
-    </div>
+  <div
+    class="vue-ui-drop-zone"
+    :class="{ 'vue-ui-drop-zone-base-overed': over }"
+    @dragenter.prevent="dragenter"
+    @dragover.prevent
+    @dragleave="dragleave"
+    @drop.prevent="drop"
+  >
+    <slot> </slot>
   </div>
 </template>
 
@@ -35,5 +33,4 @@ export default {
 }
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>
