@@ -21,5 +21,7 @@
   --vue-ui-border-radius: 3px;
   --vue-ui-card-padding: 16px;
   --vue-ui-card-margin: 16px;
+
+  --vue-ui-file-area-padding: 16px;
 }
 </style>

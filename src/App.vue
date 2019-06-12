@@ -6,7 +6,6 @@
         <VueTab v-for="tab in tabs" :key="tab.id" :id="tab.id" :label="tab.title">
           <VueConfigure :inverse="tab.inverse" :darkMode="tab.darkMode">
             <VueCard title="Buttons">
-              <VueCard>
                 <VueButtonsLine horizontal stretch>
                   <VueButton label="default" />
                   <VueButton class="primary" label="primary" />
@@ -25,7 +24,6 @@
                   <VueButton class="success flat" label="success" />
                   <VueButton class="info flat" label="info" />
                 </VueButtonsLine>
-              </VueCard>
               <VueCard>
                 <VueButtonsLine horizontal stretch>
                   <VueButton label="default" />
@@ -60,12 +58,8 @@
             </VueCard>
 
             <VueCard title="Drag and Drop">
-              <VueDroppableZone @drop="dropped = $event" v-slot="{ over }">
-                <div v-if="over">Drop here!</div>
-                <div v-else-if="dropped">{{ dropped }}</div>
-                <div v-else>drop zone</div>
-              </VueDroppableZone>
-              {{ dropped }}
+              <VueFileArea @change="files = $event.files" />
+              <span v-for="f in files" :key="f.name">{{f.name}}</span>
             </VueCard>
           </VueConfigure>
         </VueTab>
@@ -78,7 +72,7 @@
 export default {
   data: () => ({
     choice: null,
-    dropped: null,
+    files: [],
     tabId: 'tab-normal',
     tabs: [
       { id: "tab-normal", title: 'normal', inverse: false, darkMode: false },
