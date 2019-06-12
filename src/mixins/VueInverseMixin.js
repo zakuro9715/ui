@@ -1,14 +1,14 @@
-export default {
+export default (key) => ({
   props: {
-    inverse: {
+    [key]: {
       type: [Boolean, String],
+      default: true,
     },
   },
   data() {
+    const data = this.$_VueInverseMixin && this.$_VueInverseMixin.data || {}
     return {
-      inverseData: {
-        value: this.inverse,
-      },
+      inverseData: Object.assign({}, data, { [key]: !!data[key] ^ !!this[key] })
     }
   },
   provide() {
@@ -24,23 +24,21 @@ export default {
     },
   },
   computed: {
-    $_resolved() {
-      const selfValue = !!(this.inverseData && this.inverseData.value)
-      const parentValue = !!(this.$_VueInverseMixin && this.$_VueInverseMixin.data.value)
-      return !!(selfValue ^ parentValue)
+    resolvedInverse() {
+      return this.inverseData[key]
     },
-    hostClass() {
+    inverseClass() {
       return {
-        'vue-ui-inverse': this.$_resolved,
-        'vue-ui-noinverse': !this.$_resolved,
+        [`vue-ui-${key}`]: this.inverseData[key],
+        [`vue-ui-no-${key}`]: !this.inverseData[key],
       }
-    },
+   },
   },
   watch: {
-    inverse(newValue, oldValue) {
+    [key]: function(newValue, oldValue) {
       if (newValue !== oldValue) {
-        this.inverseData.value = newValue
+        this.inverseData[key] = !this.inverseData[key]
       }
     },
   },
-}
+})

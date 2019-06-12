@@ -4,7 +4,6 @@ import './styles.vue'
 import VueCard from './components/VueCard.vue'
 import VueButtonsLine from './components/VueButtonsLine.vue'
 import VueInverse from './components/VueInverse'
-import VueDarkMode from './components/VueDarkMode'
 import VueConfigure from './components/VueConfigure'
 import VueDroppableZone from './components/VueDroppableZone.vue'
 
@@ -17,7 +16,6 @@ const install = (Vue) => {
     VueButtonsLine,
     VueCard,
     VueConfigure,
-    VueDarkMode,
     VueInverse,
     VueDroppableZone,
   ]

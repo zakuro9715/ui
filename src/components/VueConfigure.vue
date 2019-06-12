@@ -1,9 +1,9 @@
 <template>
-  <VueDarkMode :value="darkMode">
-    <VueInverse :inverse="inverse">
+  <VueInverse kind="dark-mode" :value="darkMode">
+    <VueInverse :value="inverse">
       <slot />
     </VueInverse>
-  </VueDarkMode>
+  </VueInverse>
 </template>
 
 <script>
