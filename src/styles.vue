@@ -16,6 +16,9 @@
   --vue-ui-color-info           : #03c2e6;
   --vue-ui-color-success        : #42b983;
 
+  --vue-ui-button-height: 32px;
+  --vue-ui-button-padding: 0 16px;
+
   --vue-ui-border-radius: 3px;
   --vue-ui-card-padding: 16px;
   --vue-ui-card-margin: 16px;

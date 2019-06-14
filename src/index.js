@@ -1,5 +1,6 @@
 import './styles.vue'
 import VueCard from './components/VueCard.vue'
+import VueButton from './components/VueButton.vue'
 import VueButtonsLine from './components/VueButtonsLine.vue'
 import VueInverse from './components/VueInverse.vue'
 import VueConfigure from './components/VueConfigure.vue'
@@ -10,6 +11,7 @@ const version = '__VERSION__'
 
 const install = (Vue) => {
   const components = [
+    VueButton,
     VueButtonsLine,
     VueCard,
     VueConfigure,
