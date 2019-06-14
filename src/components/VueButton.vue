@@ -1,5 +1,5 @@
 <template>
-  <component :is="component" class="vue-ui-button">
+  <component :is="component" class="vue-ui-button" @click="onClick">
     <slot :label=label :value="value">
       {{ label }}
     </slot>
@@ -38,6 +38,11 @@ export default {
         return 'a'
       }
       return 'button'
+    },
+  },
+  methods: {
+    onClick(e) {
+      this.$emit('click', e)
     },
   },
 }
