@@ -2,6 +2,11 @@
   <div id="app">
     <div class="container">
       <h1>z@kuro UI Framework</h1>
+      <VueChoiceGroup v-model="choice">
+        <VueChoiceButton />
+        <VueChoiceButton id="first-choice"/>
+        <VueChoiceButton />
+      </VueChoiceGroup>
       <VueTabs :tab-id.sync="tabId">
         <VueTab
           v-for="tab in tabs"
@@ -80,7 +85,7 @@
 <script>
 export default {
   data: () => ({
-    choice: null,
+    choice: 'first-choice',
     files: [],
     tabId: 'tab-normal',
     tabs: [

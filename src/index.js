@@ -2,6 +2,8 @@ import './styles.vue'
 import VueCard from './components/VueCard.vue'
 import VueButton from './components/VueButton.vue'
 import VueButtonsLine from './components/VueButtonsLine.vue'
+import VueChoiceGroup from './components/VueChoiceGroup.vue'
+import VueChoiceButton from './components/VueChoiceButton.vue'
 import VueInverse from './components/VueInverse.vue'
 import VueConfigure from './components/VueConfigure.vue'
 import VueFileArea from './components/VueFileArea.vue'
@@ -13,6 +15,8 @@ const install = (Vue) => {
   const components = [
     VueButton,
     VueButtonsLine,
+    VueChoiceGroup,
+    VueChoiceButton,
     VueCard,
     VueConfigure,
     VueInverse,

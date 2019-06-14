@@ -25,7 +25,8 @@
     "src"
   ],
   "dependencies": {
-    "core-js": "^2.6.5"
+    "core-js": "^2.6.5",
+    "uuid": "^3.3.2"
   },
   "author": {
     "name": "z@kuro",
