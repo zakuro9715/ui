@@ -77,8 +77,6 @@ export default {
   background-color: var(--vue-ui-color-light-neutral);
 }
 
-.vue-ui-inverse .vue-ui-button-default
-
 .vue-ui-button-flat:hover, .vue-ui-button-default:hover {
   filter: brightness(95%);
 }
