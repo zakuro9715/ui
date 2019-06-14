@@ -18,46 +18,42 @@
             <VueCard title="Buttons">
               <VueButtonsLine horizontal stretch>
                 <VueButton label="default" />
-                <VueButton class="primary" label="primary" />
-                <VueButton class="accent" label="accent" />
-                <VueButton class="danger" label="danger" />
-                <VueButton class="warning" label="warning" />
-                <VueButton class="success" label="success" />
-                <VueButton class="info" label="info" />
+                <VueButton color="primary" label="primary" />
+                <VueButton color="accent" label="accent" />
+                <VueButton color="danger" label="danger" />
+                <VueButton color="warning" label="warning" />
+                <VueButton color="success" label="success" />
+                <VueButton color="info" label="info" />
               </VueButtonsLine>
               <VueButtonsLine horizontal stretch>
-                <VueButton class="flat" label="default" />
-                <VueButton class="primary flat" label="primary" />
-                <VueButton class="accent flat" label="accent" />
-                <VueButton class="danger flat" label="danger" />
-                <VueButton class="warning flat" label="warning" />
-                <VueButton class="success flat" label="success" />
-                <VueButton class="info flat" label="info" />
+                <VueButton flat label="default" />
+                <VueButton color="primary" flat label="primary" />
+                <VueButton color="accent" flat label="accent" />
+                <VueButton color="danger" flat label="danger" />
+                <VueButton color="warning" flat label="warning" />
+                <VueButton color="success" flat label="success" />
+                <VueButton color="info" flat label="info" />
               </VueButtonsLine>
-              <VueCard>
+              <VueCard title="Buttons">
                 <VueButtonsLine horizontal stretch>
                   <VueButton label="default" />
-                  <VueButton class="primary" label="primary" />
-                  <VueButton class="accent" label="accent" />
-                  <VueButton class="danger" label="danger" />
-                  <VueButton class="warning" label="warning" />
-                  <VueButton class="success" label="success" />
-                  <VueButton class="info" label="info" />
+                  <VueButton color="primary" label="primary" />
+                  <VueButton color="accent" label="accent" />
+                  <VueButton color="danger" label="danger" />
+                  <VueButton color="warning" label="warning" />
+                  <VueButton color="success" label="success" />
+                  <VueButton color="info" label="info" />
                 </VueButtonsLine>
                 <VueButtonsLine horizontal stretch>
-                  <VueButton class="flat" label="default" />
-                  <VueButton class="primary flat" label="primary" />
-                  <VueButton class="accent flat" label="accent" />
-                  <VueButton class="danger flat" label="danger" />
-                  <VueButton class="warning flat" label="warning" />
-                  <VueButton class="success flat" label="success" />
-                  <VueButton class="info flat" label="info" />
+                  <VueButton flat label="default" />
+                  <VueButton color="primary" flat label="primary" />
+                  <VueButton color="accent" flat label="accent" />
+                  <VueButton color="danger" flat label="danger" />
+                  <VueButton color="warning" flat label="warning" />
+                  <VueButton color="success" flat label="success" />
+                  <VueButton color="info" flat label="info" />
                 </VueButtonsLine>
               </VueCard>
-              <VueGroup v-model="choice">
-                <VueGroupButton class="round" value="A" label="A" />
-                <VueGroupButton value="B" label="B" />
-              </VueGroup>
               <VueButtonsLine
                 vertical
                 stretch
