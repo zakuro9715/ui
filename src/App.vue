@@ -59,10 +59,10 @@
                 stretch
                 style="width: 400px; margin: auto;"
               >
-                <VueButton class="round primary" label="button" />
+                <VueButton round color="primary" label="button" />
                 <VueButtonsLine horizontal stretch>
-                  <VueButton class="round" label="button" />
-                  <VueButton class="round danger" label="button" />
+                  <VueButton round label="button" />
+                  <VueButton round color="danger" label="button" />
                 </VueButtonsLine>
               </VueButtonsLine>
             </VueCard>

@@ -33,12 +33,17 @@ export default {
       type: Boolean,
       default: false,
     },
+    round: {
+      type: Boolean,
+      default: false,
+    },
   },
   computed: {
     classes() {
       const ret = {
         'vue-ui-button': true,
         'vue-ui-button-flat': this.flat,
+        'vue-ui-button-round': this.round,
         [`vue-ui-button-${this.color}`]: true,
       }
       return ret
@@ -74,11 +79,15 @@ export default {
 }
 
 .vue-ui-button-default {
-  background-color: var(--vue-ui-color-light-neutral);
+  background-color: var(--vue-ui-default-background);
 }
 
 .vue-ui-button-flat:hover, .vue-ui-button-default:hover {
   filter: brightness(95%);
+}
+
+.vue-ui-button-round {
+  border-radius: calc(var(--vue-ui-button-height) / 2);
 }
 
 .vue-ui-button-primary:not(.vue-ui-button-flat):hover,

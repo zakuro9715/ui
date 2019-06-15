@@ -69,11 +69,13 @@ export default {
 
 .vue-ui-no-inverse {
   --vue-ui-current-background: var(--vue-ui-color-light);
+  --vue-ui-default-background: var(--vue-ui-color-light-neutral);
   background-color: var(--vue-ui-current-background);
 }
 
 .vue-ui-inverse {
   --vue-ui-current-background: var(--vue-ui-color-light-neutral);
+  --vue-ui-default-background: var(--vue-ui-color-light);
   background-color: var(--vue-ui-current-background);
 }
 </style>
